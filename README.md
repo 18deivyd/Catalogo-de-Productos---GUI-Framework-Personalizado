@@ -1,54 +1,34 @@
-🖥️ Catálogo de Productos - GUI Framework Personalizado
+# 📦 InventoryMaster GUI - Catalogo de Productos
 
-Este repositorio contiene una aplicación de escritorio para la gestión de catálogos de productos, construida sobre un framework personalizado desarrollado en Python. El proyecto destaca por el uso de componentes reutilizables y una arquitectura limpia.
+![Python](https://img.shields.io/badge/Python-3.14+-blue.svg)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-orange.svg)
+![Tkinter](https://img.shields.io/badge/UI-Tkinter-green.svg)
 
-🌟 Lo más destacado: "El Core Deivy.py"
+**InventoryMaster** es una aplicación de escritorio profesional desarrollada en Python para la gestión de inventarios. El sistema permite administrar un catálogo de productos, visualizar movimientos de Kardex y consultar información detallada de marcas y usuarios mediante una conexión robusta a una base de datos MySQL.
 
-La pieza central de este proyecto es el módulo Deivy.py, una librería de abstracción para Tkinter. En lugar de escribir cientos de líneas repetitivas, he creado clases que encapsulan la lógica de creación de:
+---
 
-    Ventanas Autocentradas: Cálculo automático de la posición según la resolución de pantalla.
+## ✨ Características Principales
 
-    Botones con Gestión de Imágenes: Manejo automático de redimensión con PIL (Pillow) y prevención de recolección de basura (Garbage Collection) para las referencias de imagen.
+*   **Interfaz Dinámica**: Uso de `ttk.Treeview` para mostrar el inventario con actualización en tiempo real.
+*   **Consultas Relacionales**: Extracción de datos específicos (marcas, observaciones) vinculados a cada producto.
+*   **Optimización de Consultas**: Implementación de cursores con búfer (`buffered=True`) para evitar bloqueos de resultados no leídos.
+*   **Gestión de Eventos**: Uso de `<<TreeviewSelect>>` para mostrar detalles automáticos al hacer clic en un registro.
+*   **Diseño Modular**: Organización estética mediante Frames para separar la búsqueda, la tabla y los formularios de edición.
 
-    Componentes UI Estandarizados: Clases para Labels, Entrys, Textos y Combobox con estilos predefinidos (bordes, colores de resaltado y fuentes).
+## 🛠️ Tecnologías Utilizadas
 
-🚀 Funcionalidades del Catálogo
+*   **Lenguaje:** [Python 3.14+](https://www.python.org/)
+*   **Interfaz Gráfica:** Tkinter / TTK
+*   **Conector de BD:** `mysql-connector-python`
+*   **Base de Datos:** MySQL (compatible con Laragon y MySQL Workbench)
 
-La interfaz principal (Catalogo.py) implementa un sistema de pestañas organizadas:
+## ⚙️ Instalación y Configuración
 
-    Pestaña Producto: Información técnica, marcas, fabricantes y garantías.
+### 1. Clonar el repositorio
+```bash
+git clone [https://github.com/18deivyd/Catalogo-de-Productos---GUI-Framework-Personalizado.git](https://github.com/18deivyd/Catalogo-de-Productos---GUI-Framework-Personalizado.git)
+cd Catalogo-de-Productos---GUI-Framework-Personalizado
 
-    Pestaña Fiscal: Configuración de impuestos (I.V.A), retenciones e I.S.L.R.
-
-    Pestaña Proveedor: Gestión de costos, historial de compras, stock crítico (Max/Min) y trazabilidad de proveedores.
-
-🛠️ Herramientas Utilizadas
-
-    Python 3.x: Lenguaje base.
-
-    Tkinter & TTK: Para la interfaz gráfica y el manejo de widgets avanzados como Notebook.
-
-    Pillow (PIL): Procesamiento y renderizado de iconos en alta calidad.
-
-    Layout Management: Uso intensivo de Grid y Pack para una distribución precisa de elementos.
-
-📂 Estructura del Código
-Plaintext
-
-├── Catalogo.py       # Lógica principal de la interfaz y distribución
-├── Deivy.py          # Framework/Librería de componentes personalizados (POO)
-└── Imagenes/         # Assets visuales para la barra de herramientas
-
-⚙️ Cómo ejecutar
-
-    Asegúrate de tener instalada la librería Pillow:
-    Bash
-
-    pip install Pillow
-
-    Ejecuta el archivo principal:
-    Bash
-
-    python Catalogo.py
-
-Desarrollado por Deivy Delgado Enfocado en crear soluciones de software escalables y herramientas de productividad eficientes.
+Desarrollado por: Deivy Delgado
+Proyecto enfocado en la arquitectura de software y gestión de bases de datos relacionales.
